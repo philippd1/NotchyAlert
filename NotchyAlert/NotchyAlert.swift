@@ -356,7 +356,7 @@ public class NotchyAlert {
      
      - parameter force: the intensity of the haptic feedback
      */
-    public func feedbackGenerator(force: UIImpactFeedbackStyle) {
+    public func feedbackGenerator(force: UIImpactFeedbackGenerator.FeedbackStyle) {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: force)
             generator.impactOccurred()
