@@ -59,7 +59,9 @@ public class NotchyAlert {
                 self.titleLabel.center = self.notchy.center
                 View.addSubview(self.notchy)
                 View.addSubview(self.titleLabel)
-                feedbackGenerator(force: .light)
+                if #available(iOS 10.0, *) {
+                    feedbackGenerator(force: .light)
+                }
                 
                 if bounce != nil && bounce == true {
                     self.animateWithBounceEffect(description: false, imageView: false)
@@ -79,7 +81,9 @@ public class NotchyAlert {
                 self.descriptionLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
                 self.descriptionLabel?.center = self.notchy.center
                 View.addSubview(self.descriptionLabel!)
-                feedbackGenerator(force: .light)
+                if #available(iOS 10.0, *) {
+                    feedbackGenerator(force: .light)
+                }
                 
                 if bounce != nil && bounce == true {
                     self.animateWithBounceEffect(description: true, imageView: false)
@@ -98,7 +102,9 @@ public class NotchyAlert {
                 self.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
                 self.imageView?.center = notchy.center
                 View.addSubview(self.imageView!)
-                feedbackGenerator(force: .light)
+                if #available(iOS 10.0, *) {
+                    feedbackGenerator(force: .light)
+                }
                 
                 if bounce != nil && bounce == true {
                     self.animateWithBounceEffect(description: false, imageView: true)
@@ -125,7 +131,9 @@ public class NotchyAlert {
                 self.imageView?.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
                 self.imageView?.center = self.notchy.center
                 View.addSubview(self.imageView!)
-                feedbackGenerator(force: .light)
+                if #available(iOS 10.0, *) {
+                    feedbackGenerator(force: .light)
+                }
                 
                 if bounce != nil && bounce == true {
                     self.animateWithBounceEffect(description: true, imageView: true)
